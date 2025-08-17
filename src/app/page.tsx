@@ -1,4 +1,5 @@
 import { MainHeader } from '@/header/components/main-header';
+import { BasicHero } from '@/hero/components/basic-hero';
 import { CategoryNavigation } from '@/navigation/components/category-navigation';
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
       <MainHeader />
       <main>
         <CategoryNavigation />
-        <h1>Hello World</h1>
+        <BasicHero />
       </main>
     </div>
   );
