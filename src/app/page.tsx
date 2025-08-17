@@ -1,13 +1,15 @@
+import { Container } from '@/components/container';
 import { MainHeader } from '@/header/components/main-header';
 import { BasicHero } from '@/hero/components/basic-hero';
-import { CategoryNavigation } from '@/navigation/components/category-navigation';
 
 export default function Home() {
   return (
-    <div className="mx-auto min-h-screen font-[var(--font-playfair-display)] xl:max-w-6xl 2xl:max-w-7xl">
-      <MainHeader />
+    <div className="mx-auto min-h-screen font-[var(--font-playfair-display)]">
+      <Container>
+        <MainHeader />
+      </Container>
       <main>
-        <CategoryNavigation />
+        {/* <CategoryNavigation /> */}
         <BasicHero />
       </main>
     </div>
