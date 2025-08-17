@@ -11,9 +11,9 @@ export default function Home() {
         <MainHeader />
       </Container>
       <CategoryNavigation />
-      <Container>
+      <div className="2xl:px-12">
         <BasicHero />
-      </Container>
+      </div>
       <Collections />
     </div>
   );

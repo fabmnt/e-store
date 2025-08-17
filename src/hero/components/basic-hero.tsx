@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function BasicHero() {
   return (
-    <div className="space-y-4 overflow-hidden 2xl:space-y-8">
+    <div className="space-y-4 overflow-hidden 2xl:space-y-10">
       <div>
         <h2 className="motion-translate-y-in-100 text-center text-8xl uppercase tracking-tight">
           ELIGE TU NUEVO ESTILO
