@@ -6,8 +6,8 @@ import { CategoryNavigation } from '@/navigation/components/category-navigation'
 
 export default function Home() {
   return (
-    <div className="mx-auto min-h-screen space-y-2 font-[var(--font-playfair-display)] 2xl:space-y-4">
-      <Container>
+    <div className="mx-auto min-h-screen font-[var(--font-playfair-display)]">
+      <Container className="sticky top-0 z-50 bg-white">
         <MainHeader />
       </Container>
       <CategoryNavigation />

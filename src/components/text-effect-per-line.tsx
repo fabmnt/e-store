@@ -4,9 +4,9 @@ import { TextEffect } from '@/components/ui/text-effect';
 
 export function TextEffectPerLine({ text }: { text: string }) {
   const [ref, entry] = useIntersectionObserver({
-    threshold: 0.5,
+    threshold: 1,
     root: null,
-    rootMargin: '0px',
+    rootMargin: '-120px',
   });
 
   const [hasTriggered, setHasTriggered] = useState(false);

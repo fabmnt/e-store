@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Button } from '@/components/ui/button';
 
 export function BasicHero() {
   return (
@@ -8,21 +10,57 @@ export function BasicHero() {
           ELIGE TU NUEVO ESTILO
         </h2>
       </div>
-      <div className="motion-translate-y-in-100 relative grid grid-cols-2 gap-x-2 py-4 2xl:gap-x-6">
-        <Image
-          alt="Hero"
-          className="h-full max-h-[420px] w-full object-cover object-center 2xl:max-h-[650px]"
-          height="500"
-          src="/aretes1.jpg"
-          width="500"
-        />
-        <Image
-          alt="Hero"
-          className="h-full max-h-[420px] w-full object-cover object-center 2xl:max-h-[650px]"
-          height="500"
-          src="/reloj1.jpeg"
-          width="500"
-        />
+      <div className="motion-translate-y-in-100 grid h-[600px] w-full grid-cols-2 py-4">
+        <AspectRatio className="relative w-full" ratio={1 / 1}>
+          <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-50 w-full transform space-y-12 px-8 text-center">
+            <div className="font-light text-white text-xl uppercase">
+              Para ella
+            </div>
+            <h4 className="text-5xl text-white leading-14 tracking-wider">
+              Lorem ipsum dolor sit amet consectetur
+            </h4>
+            <Button
+              className="cursor-pointer rounded-none bg-orange-300 text-black uppercase hover:bg-orange-200"
+              size="lg"
+            >
+              Ver productos
+            </Button>
+          </div>
+          <Image
+            alt="Hero"
+            className="object-cover object-center opacity-90 blur-[1px] brightness-90 contrast-125"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            src="/aretes1.jpg"
+          />
+          <div className="absolute inset-0 h-full w-full bg-black/50" />
+        </AspectRatio>
+        <AspectRatio className="relative w-full" ratio={1 / 1}>
+          <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-50 w-full transform space-y-12 px-8 text-center">
+            <div className="font-light text-white text-xl uppercase">
+              Para él
+            </div>
+            <h4 className="text-5xl text-white leading-14 tracking-wider">
+              Lorem ipsum dolor sit amet consectetur
+            </h4>
+            <Button
+              className="cursor-pointer rounded-none bg-orange-300 text-black uppercase hover:bg-orange-200"
+              size="lg"
+            >
+              Ver productos
+            </Button>
+          </div>
+          <Image
+            alt="Hero"
+            className="object-cover object-center opacity-90 blur-[1px] brightness-90 contrast-125"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            src="/reloj1.jpeg"
+          />
+          <div className="absolute inset-0 h-full w-full bg-black/50" />
+        </AspectRatio>
       </div>
     </div>
   );
